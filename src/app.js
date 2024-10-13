@@ -11,7 +11,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //Config connection
-const PORT = process.env.service_port;
+const port = process.env.PORT || 3001;
 
 const router = express();
 router.use(logRequest);
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
 // })
 
 //Protocolo HTTP
-router.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+router.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
