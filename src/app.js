@@ -27,7 +27,7 @@ const maps = require('./routes/maps/maps');
 
 // router.use('/serviceFB', serviceFBDB);
 router.use(serviceFBDB);
-router.use('api/user', serviceMySqlDB);
+router.use('/api/user', serviceMySqlDB);
 router.use(auth);
 router.use(maps);
 
