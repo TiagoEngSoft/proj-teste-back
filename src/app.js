@@ -21,13 +21,15 @@ router.use(cors());
 
 //Import de rotas
 const serviceFBDB = require('./routes/routes_service_FB/routesDBFB');
-const serviceMySqlDB = require('./routes/routes_service_MySql/routesDBMySql');
+//const serviceMySqlDB = require('./routes/routes_service_MySql/routesDBMySql');
+const userRouters = require('./routes/userRoutes');
 const auth = require('./routes/auth/auth');
 const maps = require('./routes/maps/maps');
 
 // router.use('/serviceFB', serviceFBDB);
 router.use(serviceFBDB);
-router.use('/api/user', serviceMySqlDB);
+//router.use('/api/user', serviceMySqlDB);
+router.use('/api/user', userRouters);
 router.use(auth);
 router.use(maps);
 

@@ -115,4 +115,4 @@ async function loginUsuario(username, senha) {
 }
 
 
-module.exports = { inserirUsuario, loginUsuario };
+module.exports = { inserirUsuario, loginUsuario, getDbConnectionFromPool };
